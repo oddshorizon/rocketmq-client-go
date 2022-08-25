@@ -114,9 +114,9 @@ func NewNamesrv(resolver primitive.NsResolver, config *remote.RemotingClientConf
 		return nil, errors.New("no name server addr found with resolver: " + resolver.Description())
 	}
 
-	if err := primitive.NamesrvAddr(addr).Check(); err != nil {
-		return nil, err
-	}
+	//if err := primitive.NamesrvAddr(addr).Check(); err != nil {
+	//	return nil, err
+	//}
 	nameSrvClient := remote.NewRemotingClient(config)
 	return &namesrvs{
 		srvs:             addr,
