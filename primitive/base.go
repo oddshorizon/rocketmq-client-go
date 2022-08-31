@@ -41,11 +41,11 @@ func NewNamesrvAddr(s ...string) (NamesrvAddr, error) {
 		ss = strings.Split(s[0], ";")
 	}
 
-	for _, srv := range ss {
-		if err := verifyIP(srv); err != nil {
-			return nil, err
-		}
-	}
+	//for _, srv := range ss {
+	//	if err := verifyIP(srv); err != nil {
+	//		return nil, err
+	//	}
+	//}
 
 	addrs := make(NamesrvAddr, 0)
 	addrs = append(addrs, ss...)
@@ -53,11 +53,11 @@ func NewNamesrvAddr(s ...string) (NamesrvAddr, error) {
 }
 
 func (addr NamesrvAddr) Check() error {
-	for _, srv := range addr {
-		if err := verifyIP(srv); err != nil {
-			return err
-		}
-	}
+	//for _, srv := range addr {
+	//	if err := verifyIP(srv); err != nil {
+	//		return err
+	//	}
+	//}
 	return nil
 }
 
